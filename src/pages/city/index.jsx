@@ -128,6 +128,7 @@ export default class City extends React.Component{
                 </Card>
                 <div className="content-wrap">
                     <Table
+                        bordered
                         columns={columns} 
                         dataSource={this.state.list}
                         pagination={this.state.pagination}  
