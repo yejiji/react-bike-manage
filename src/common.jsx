@@ -1,20 +1,19 @@
 import React from 'react'
-import {Row} from 'antd'
+import { Row, Col } from 'antd';
 import Header from './components/Header'
+import './style/common.less'
+export default class Common extends React.Component {
 
-
-export default class Common extends React.Component{
-
-    render(){
+    render() {
         return (
             <div>
-                <Row className="container">
-                    <Header menuType="second"/>        
+                <Row className="simple-page">
+                    <Header menuType="second" />
                 </Row>
-                <Row>
+                <Row className="content">
                     {this.props.children}
                 </Row>
             </div>
-        )
+        );
     }
 }

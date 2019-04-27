@@ -34,15 +34,25 @@ export default class Header extends React.Component{
     }
     
     render() {
+        const menuType = this.props.menuType
         return (
             <div className="header">
                <Row className="header-top">
-                   <Col span={24}>
+                    {
+                        menuType?
+                            <Col span="6" className="logo">
+                                <img src="/assets/logo-ant.svg" alt=""/>
+                                <span>Night通用管理系统</span>
+                            </Col>:''
+                    }     
+                   <Col span={menuType?18:24}>
                          <span>欢迎,{this.state.userName}</span>
                          <a href="#">退出</a>
                    </Col>   
                 </Row>   
-                <Row className="breadercrumb">
+                {
+                    menuType?'':
+                    <Row className="breadercrumb">
                     <Col span={4} className="breadercrumb-title">
                         首页
                     </Col>
@@ -53,6 +63,8 @@ export default class Header extends React.Component{
                         </span>
                     </Col>
                 </Row> 
+                }
+                
              </div>
         )
     }

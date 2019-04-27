@@ -17,8 +17,9 @@ import FormRegister from './pages/form/register'
 import BasicTable from './pages/table/basicTable'
 import HightTable from './pages/table/highTable'
 import City from './pages/city'
-import Order from './pages/order'
+import Order from './pages/order/index'
 import Common from './common'
+import OrderDetail  from './pages/order/detail'
 export default class IRouter extends React.Component{
     
     render() {
@@ -50,8 +51,9 @@ export default class IRouter extends React.Component{
                     </Admin>
                     }/>
                     <Route path="/common" render={()=>
+
                         <Common >
-                            <Route path="/common/order/detail/:orderId" component={Login}/>
+                            <Route path="/common/order/detail/:orderId" component={OrderDetail}/>
                         </Common >
                         
                     }/>
