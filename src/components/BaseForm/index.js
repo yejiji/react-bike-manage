@@ -80,8 +80,8 @@ class FilterForm extends React.Component{
                         }
                     </FormItem>;
                     formItemList.push(CHECKBOX)
-                }else if (item.type == 'datepicker') {
-                    const DatePicker = <FormItem label={label} key={field}>
+                }else if (item.type == 'DATE') {
+                    const Date = <FormItem label={label} key={field}>
                         {
                             
                                 getFieldDecorator([field])(
@@ -90,7 +90,7 @@ class FilterForm extends React.Component{
                             
                         }
                     </FormItem>;
-                    formItemList.push(DatePicker)
+                    formItemList.push(Date)
                 }
             })
         }
