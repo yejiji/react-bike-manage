@@ -11,4 +11,4 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 
 // export default configureStore;
 
-export default ()=>createStore(reducer,composeWithDevTools())
+export default (prevState)=>createStore(reducer,prevState)
